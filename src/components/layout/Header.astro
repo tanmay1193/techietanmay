@@ -2,7 +2,7 @@
 import Search from "@/components/Search.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
 import { menuLinks } from "@/site.config";
-import {siteConfig} from "../../site.config";
+import { siteConfig } from "../../site.config";
 ---
 
 <header class="group relative mb-28 flex items-center sm:ps-18" id="main-header">
@@ -12,7 +12,7 @@ import {siteConfig} from "../../site.config";
 			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
 			href="/"
 		>
-			<svg
+			<!--<svg
 				aria-hidden="true"
 				class="me-3 h-10 w-6 sm:absolute sm:-start-18 sm:me-0 sm:h-20 sm:w-12"
 				fill="none"
@@ -31,8 +31,33 @@ import {siteConfig} from "../../site.config";
 					d="m136 53.333 45.333-26.666v120L226.667 120V80L272 53.333V160l-90.667 53.333v240L136 480V306.667L45.334 360V240l45.333-26.667v53.334L136 240V53.333Z"
 					fill="#53C68C"></path>
 				<path d="M45.334 240 0 213.334v120L45.334 360V240Z" fill="#B04304"></path>
+			</svg>-->
+
+			<svg
+				aria-hidden="true"
+				class="icon-hover-effect mr-3 h-11 w-6 sm:absolute sm:left-[-4.5rem] sm:mr-0 sm:h-20 sm:w-12 sm:pb-6"
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<title>Logo</title>
+				<path d="M3 5h18M12 5v14M6 12h3M15 12h3"></path>
 			</svg>
-			<span class="text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
+			<span class="prompt">&gt;</span>
+			<span class="text-xl font-bold sm:text-3xl">{siteConfig.title}</span>
+			<span class="cursor-underline">_</span>
+
+			<!--<img
+				src="/avatar.png"
+				alt="Avatar"
+				class="me-3 h-10 w-6 sm:absolute sm:-start-18 sm:me-1 sm:h-20 sm:w-12 rounded-full object-cover"
+  			/>-->
+
+			
 		</a>
 		<nav
 			aria-label="Main menu"
@@ -116,3 +141,13 @@ import {siteConfig} from "../../site.config";
 
 	customElements.define("mobile-button", MobileNavBtn);
 </script>
+<style>
+	.icon-hover-effect {
+		stroke: var(--color-global-text);
+		transition: stroke 0.3s ease;
+	}
+
+	.icon-hover-effect:hover {
+		stroke: var(--color-accent); /* changes on hover */
+	}
+</style>

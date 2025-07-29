@@ -1,19 +1,18 @@
 ---
 import PageLayout from "@/layouts/Base.astro";
-
-const meta = {
-	description: "I'm a starter theme for Astro.build",
-	title: "About",
-};
 ---
 
-<PageLayout meta={meta}>
+<PageLayout meta={{ title: "About" }}>
 	<h1 class="title mb-6">About</h1>
-	<div class="prose prose-sm prose-cactus max-w-none">
-		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
+
+	<section>
+		<p class="mb-4">
+			Hi, I'm a starter Astro. I'm particularly great for getting you started with your own blogging
 			website.
 		</p>
+	</section>
+
+	<div class="prose prose-cactus max-w-none">
 		<p>Here are my some of my awesome built in features:</p>
 		<ul class="list-inside list-disc" role="list">
 			<li>I'm ultra fast as I'm a static site</li>
@@ -24,6 +23,7 @@ const meta = {
 			<li>Shiki code syntax highlighting</li>
 			<li>Satori for auto generating OG images for blog posts</li>
 		</ul>
+
 		<p>
 			Clone or fork my <a
 				class="cactus-link inline-block"

@@ -1,5 +1,6 @@
 /* would like to ignore ./src/pages/og-image/[slug].png.ts */
 @import "tailwindcss";
+
 /* config for tailwindcss-typography plugin */
 @config "../../tailwind.config.ts";
 
@@ -21,6 +22,8 @@
 		color-scheme: light dark;
 		accent-color: var(--color-accent);
 		scrollbar-gutter: stable;
+		font-family: 'Inter', system-ui, sans-serif;
+		font-size: 1rem;
 
 		&[data-theme="light"] {
 			color-scheme: light;
@@ -28,12 +31,12 @@
 
 		&[data-theme="dark"] {
 			color-scheme: dark;
-			--color-global-bg: oklch(23.64% 0.0045 248);
-			--color-global-text: oklch(83.54% 0 264);
-			--color-link: oklch(70.44% 0.1133 349);
-			--color-accent: oklch(70.91% 0.1415 163.7);
-			--color-accent-2: oklch(94.66% 0 0);
-			--color-quote: oklch(94.8% 0.106 136.49);
+			--color-global-bg: oklch(24.5% 0.02 275);
+			--color-global-text: oklch(83.5% 0.01 250);
+			--color-link: oklch(70.44% 0.1133 275);
+			--color-accent: oklch(72% 0.18 280);
+			--color-accent-2: oklch(90% 0.02 260);
+			--color-quote: oklch(84% 0.05 300);
 		}
 	}
 
@@ -55,6 +58,33 @@
 	}
 	[data-astro-image="constrained"] {
 		max-width: 100%;
+	}
+
+	/* Blinking underline cursor */
+	.cursor-underline {
+		display: inline-block;
+		margin-left: 0.2em;
+		font-weight: 700;
+		font-size: 1.2em;
+		line-height: 1;
+		color: var(--color-accent); /* This will adapt in both themes */
+		animation: blink 1s steps(2, start) infinite;
+	}
+
+	/* Blinking animation */
+	@keyframes blink {
+		0%, 100% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.prompt {
+		margin-right: 0.4em;
+		color: var(--color-accent);
+		font-weight: 600;
 	}
 }
 
