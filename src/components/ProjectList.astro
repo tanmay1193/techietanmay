@@ -1,0 +1,32 @@
+---
+import { projects } from "@/data/projects";
+---
+
+<ul class="mt-8 space-y-6">
+	{
+		projects.map(({ title, description, link, tags }) => (
+			<li class="flex flex-col items-start justify-start gap-2">
+				<a
+					href={link}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link hover:text-accent text-xl font-bold"
+				>
+					{title}
+				</a>
+
+				<p class="text-sm text-[var(--color-global-text)]">{description}</p>
+
+				{tags && (
+					<div class="flex flex-wrap gap-2">
+						{tags.map((tag) => (
+							<span class="rounded bg-[color:var(--color-accent-2)]/10 px-2 py-0.5 text-xs font-medium text-[var(--color-accent)]">
+								#{tag}
+							</span>
+						))}
+					</div>
+				)}
+			</li>
+		))
+	}
+</ul>

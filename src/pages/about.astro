@@ -1,36 +1,98 @@
 ---
 import PageLayout from "@/layouts/Base.astro";
+import DecryptingHeader from "@/components/DecryptingHeader.astro";
 ---
 
 <PageLayout meta={{ title: "About" }}>
-	<h1 class="title mb-6">About</h1>
+	<DecryptingHeader text="> whoami" className="title pb-6 font-bold" />
 
 	<section>
 		<p class="mb-4">
-			Hi, I'm a starter Astro. I'm particularly great for getting you started with your own blogging
-			website.
+			Hi, I'm Teckchandani Tanmay👨‍💻, a Network Analyst, Technical writer, Gamer and listener
+			natively from India, currently living in Canada.
 		</p>
-	</section>
 
-	<div class="prose prose-cactus max-w-none">
-		<p>Here are my some of my awesome built in features:</p>
-		<ul class="list-inside list-disc" role="list">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
-		</ul>
+		<p class="mb-4">
+			This blog✍️ is my little corner of the internet — where I jot down thoughts, share projects,
+			and try to finally finish the things I start (this website included).
+		</p>
 
-		<p>
-			Clone or fork my <a
-				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
+		<p class="mb-4">
+			Right now, I’m actively looking for opportunities in cybersecurity, network operations, or
+			anything at the intersection of tech and problem-solving.
+		</p>
+
+		<p class="mb-4">
+			I’m lucky — truly. My family is my grounding force, and I’m deeply attached to them. If
+			rebirth is real, I want the same family again. As for food? Nothing beats what Mumma cooks.
+			Period.
+		</p>
+
+		<p class="mb-4">
+			I’ve loved 🎮gaming since I was a kid. I started with 👾Mario, Contra, and Pacman, then moved
+			to Roadrash and EA Cricket 07 (still one of my favorites). Later came CS 1.6, Warcraft III
+			(DotA), and World of Warcraft. Now I mostly play Dota 2, CS2, Red Dead Redemption 2, and
+			sometimes different games.
+		</p>
+
+		<p class="mb-4">
+			Chai☕ is my favorite beverage, but I enjoy coffee on Fridays and a little beer or whiskey
+			during cold weather. Old Monk is a classic I still enjoy.
+		</p>
+
+		<p class="mb-4">
+			Curious what I’m doing these days? Check out my <a href="/now/" class="hover:text-accent underline font-semibold">now</a> page.
+		</p>
+
+		<h1 class="mb-2 text-xl font-bold">Colophon</h1>
+		<p class="mb-4">
+			This website is built using <a
+				href="https://astro.build/"
+				class="hover:text-accent font-semibold underline">Astro</a
+			> and <a href="https://tailwindcss.com/" class="hover:text-accent font-semibold underline"
+				>tailwindcss</a
+			>. This theme is <a
+				href="https://github.com/chrismwilliams/astro-theme-cactus"
+				class="hover:text-accent font-semibold underline">Astro Cactus</a
+			>. I have added some customizations. Clone or fork my <a
+				class="hover:text-accent font-semibold underline"
+				href="https://github.com/tanmay1193/techietanmay"
 				rel="noreferrer"
 				target="_blank">repo</a
-			> if you like me!
+			> if you like it!
 		</p>
-	</div>
+
+		<h1 class="mb-2 text-xl font-bold">Let's Connect</h1>
+		<p>
+			I'm always open for chit-chat. Got a idea, side project, or just love Dota 2? Send me an <a
+				href="mailto:ttanmay1193@gmail.com"
+				class="hover:text-accent font-semibold underline">email</a
+			>.
+		</p>
+		<p class="mb-4">
+			Feel free to ping to at
+			<a href="https://twitter.com/techietanmay" class="hover:text-accent font-semibold underline"
+				>Twitter</a
+			>, discord (<span class="font-semibold italic">iceblade_11</span>), or
+			<a
+				href="https://www.linkedin.com/in/tanmaytechie/"
+				class="hover:text-accent font-semibold underline">LinkedIn</a
+			>.
+		</p>
+
+		<div class="prose prose-cactus max-w-none">
+			<!--<p>Here are my some of my awesome built in features:</p>
+			<ul class="list-inside list-disc" role="list">
+				<li>I'm ultra fast as I'm a static site</li>
+				<li>I'm fully responsive</li>
+				<li>I come with a light and dark mode</li>
+				<li>I'm easy to customise and add additional content</li>
+				<li>I have Tailwind CSS styling</li>
+				<li>Shiki code syntax highlighting</li>
+				<li>Satori for auto generating OG images for blog posts</li>
+			</ul> -->
+
+			<p></p>
+		</div>
+	</section>
 </PageLayout>

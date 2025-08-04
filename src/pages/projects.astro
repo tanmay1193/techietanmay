@@ -1,0 +1,22 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import ProjectList from "@/components/ProjectList.astro";
+import DecryptingHeader from "@/components/DecryptingHeader.astro";
+import { Icon } from "astro-icon/components";
+
+const meta = {
+	title: "Projects",
+	description: "A collection of things I've built, broken, and fixed.",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="mb-6 flex items-center gap-3">
+		<DecryptingHeader text="> ls ~/Projects" className="title pb-0 font-bold" />
+		<a class="text-accent" href="/rss.xml" target="_blank">
+			<span class="sr-only">RSS feed</span>
+			<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:rss" />
+		</a>
+	</div>
+	<ProjectList />
+</PageLayout>

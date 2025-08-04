@@ -2,11 +2,12 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
-import Note from "@/components/note/Note.astro";
+//import Note from "@/components/note/Note.astro";
 import { getAllPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 import DecryptingHeader from "@/components/DecryptingHeader.astro";
+import { projects } from "@/data/projects"; // adjust path if needed
 
 // Posts
 const MAX_POSTS = 10;
@@ -16,24 +17,40 @@ const allPostsByDate = allPosts
 	.slice(0, MAX_POSTS) as CollectionEntry<"post">[];
 
 // Notes
-const MAX_NOTES = 5;
-const allNotes = await getCollection("note");
-const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
+//const MAX_NOTES = 5;
+//const allNotes = await getCollection("note");
+//const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
+
+// Projects
+const MAX_PROJECTS = 3;
+const topProjects = projects.slice(0, MAX_PROJECTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<DecryptingHeader text="Hey there!" className="title pb-6" />
+		<DecryptingHeader text="> Hello, I'm Teckchandani Tanmay!" className="title pb-6 font-bold" />
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, a simple starter that you can use to create your website or blog.
-			If you want to know more about how you can customise me, add more posts, and make it your own,
-			click on the GitHub icon link below and it will take you to my repo.
+			A Network Analyst who enjoys using tech to solve problems and keep things secure.
 		</p>
+
+		<p class="mb-4">
+			Welcome to my blog that logs tech, life, and everything I learn in between — from networks to
+			nerd-outs. Curiosity (and chai) included.
+		</p>
+
 		<SocialList />
+
+		<p class="mt-4">
+			You can learn more <a href="/about/" class="hover:text-accent font-semibold underline"
+				>about me</a
+			> and see what I’m up to <a href="/now/" class="hover:text-accent font-semibold underline"
+				>now</a
+			>.
+		</p>
 	</section>
 	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Posts</a></h2>
-		<ul class="space-y-6" role="list">
+		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Writings</a></h2>
+		<ul class="space-y-4" role="list">
 			{
 				allPostsByDate.map((p) => (
 					<li class="grid gap-2 sm:grid-cols-[auto_1fr]">
@@ -43,7 +60,32 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 			}
 		</ul>
 	</section>
-	{
+
+	<section class="mt-16">
+		<h2 class="title text-accent mb-6 text-xl"><a href="/projects/">Projects</a></h2>
+		<ul class="space-y-4" role="list">
+			{
+				topProjects.map((project) => (
+					<li>
+						<h3>
+							<a
+								href={project.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cactus-link hover:text-accent"
+							>
+								{project.title}
+							</a>
+						</h3>
+						<p class="mt-1 text-sm">{project.description}</p>
+						<p class="text-muted mt-2 text-xs">{project.tags.map((tag) => `#${tag}`).join(" ")}</p>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	<!--{
 		latestNotes.length > 0 && (
 			<section class="mt-16">
 				<h2 class="title text-accent mb-6 text-xl">
@@ -58,5 +100,5 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 				</ul>
 			</section>
 		)
-	}
+	}-->
 </PageLayout>
