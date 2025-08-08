@@ -1,5 +1,6 @@
 ---
 title: "Hello World it is!"
+slug: "helloworld"
 description: "First post on my first ever website."
 publishDate: "2 Aug 2025"
 tags: ["Introduction"]
@@ -13,7 +14,7 @@ It feels surreal saying that.
 
 There're over [1.5 billion websites online](https://www.internetlivestats.com/total-number-of-websites/), yet we found each other. Must be some good routing.
 
-Hi again, I'm Tanmay (Techie) a Network analyst, cybersecurity learner and gamer who likes chai (coffee on fridays) more than big talk (I do enjoy small talk :p).
+Hi again, I'm Tanmay (Techie) a Network analyst, cybersecurity learner and gamer who likes chai (coffee on fridays) more than small talk (I do enjoy deep conversations).
 
 ## Why this Blog?
 I’ve always had ideas. Some I start. Few I finish. This blog is my way of changing that.

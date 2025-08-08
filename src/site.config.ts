@@ -45,7 +45,7 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "/Projects",
 	},
 	{
-		path: "/cv.pdf",
+		path: "https://docs.google.com/document/d/1rM4BUaK71t9coGyRUbP0hM2Jq836pUMF/edit?usp=sharing&ouid=117748818570119397733&rtpof=true&sd=true",
 		title: "/CV",
 	},
 ];
