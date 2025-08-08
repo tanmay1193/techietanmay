@@ -1,5 +1,6 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry } from "astro:content";
+//import { type CollectionEntry, getCollection } from "astro:content";
 import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 //import Note from "@/components/note/Note.astro";
@@ -78,7 +79,9 @@ const topProjects = projects.slice(0, MAX_PROJECTS);
 							</a>
 						</h3>
 						<p class="mt-1 text-sm">{project.description}</p>
-						<p class="text-accent font-semibold tracking-wide mt-2 text-xs">{project.tags.map((tag) => `#${tag}`).join(" ")}</p>
+						<p class="text-accent mt-2 text-xs font-semibold tracking-wide">
+							{project.tags.map((tag) => `#${tag}`).join(" ")}
+						</p>
 					</li>
 				))
 			}
