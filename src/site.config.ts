@@ -45,6 +45,10 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "/Projects",
 	},
 	{
+		path: "/snippets/",
+		title: "/Snippets",
+	},
+	{
 		path: "https://docs.google.com/document/d/1VcAc7jhF3B2tOL6JJ5aa76FN4kXil9FP5-svZPBMzPU/edit?tab=t.0#heading=h.gjdgxs",
 		title: "/CV",
 	},

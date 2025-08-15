@@ -55,4 +55,13 @@ const tag = defineCollection({
 	}),
 });
 
-export const collections = { post, note, tag };
+const snippet = defineCollection({
+  loader: glob({ base: "./src/content/snippet", pattern: "**/*.{md,mdx}" }),
+  schema: z.object({
+    title: titleSchema,
+    description: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = { post, note, tag, snippet };

@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getAllSnippets } from "@/data/snippet";
+import PageLayout from "@/layouts/Base.astro";
+import type { GetStaticPaths, Page } from "astro";
+import DecryptingHeader from "@/components/DecryptingHeader.astro";
+import { Icon } from "astro-icon/components";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allSnippets = await getAllSnippets();
+  return paginate(allSnippets, {
+    pageSize: 20, // or however many you want per page
+  });
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<CollectionEntry<"snippet">>;
+}
+
+const { page } = Astro.props;
+
+const meta = {
+  title: "Snippets",
+  description: "A collection of useful code snippets."
+};
+---
+
+<PageLayout meta={meta}>
+  <div class="mb-6 flex items-center gap-3">
+		<DecryptingHeader text="> ls ~/Snippets" className="title pb-0 font-bold" />
+		<a class="text-accent" href="/rss.xml" target="_blank">
+			<span class="sr-only">RSS feed</span>
+			<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:rss" />
+		</a>
+	</div>
+  <ul class="space-y-2">
+    {page.data.map((snippet) => (
+      <li>
+        <a class="cactus-link hover:text-accent" href={`/snippets/${snippet.id}/`}>
+          {snippet.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-4 flex justify-between">
+    {page.url.prev && <a href={page.url.prev}>← Previous</a>}
+    {page.url.next && <a href={page.url.next}>Next →</a>}
+  </div>
+</PageLayout>
