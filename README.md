@@ -57,3 +57,7 @@ npm run dev   # or pnpm dev
 ## Deploy
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tanmay1193/techietanmay) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tanmay1193/techietanmay)
+
+## Sponsor me
+
+[![Support me on Ko-fi](https://img.shields.io/badge/Support-Ko--fi-29ABE0?style=for-the-badge&logo=kofi)](https://ko-fi.com/tanmaytechie)
