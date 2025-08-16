@@ -6,6 +6,10 @@ This is my personal blog and portfolio, built by first cloning the [Astro Cactus
 
 Check out the [Demo](https://0xtechietanmay.vercel.app), hosted on Vercel
 
+## Preview
+
+<img width="929" height="1284" alt="image" src="https://github.com/user-attachments/assets/66f30164-9f39-4b84-bdff-b330ac53a8b4" />
+
 ## Quick Start
 
 Clone the repo and install dependencies:
