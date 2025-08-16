@@ -1,4 +1,4 @@
-# TechieTanmay Blog
+# Techie Tanmay Blog
 
 This is my personal blog and portfolio, built by first cloning the [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) theme and making extensive customizations to fit my style and content.
 
