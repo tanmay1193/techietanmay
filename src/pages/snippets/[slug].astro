@@ -4,12 +4,18 @@ import { getAllSnippets } from "@/data/snippet";
 import PageLayout from "@/layouts/Base.astro";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 
+// --- Trailing slash redirect ---
+if (Astro.request.url.endsWith("/")) {
+	// Redirect to URL without trailing slash
+	return Astro.redirect(Astro.request.url.slice(0, -1), 301);
+}
+
 export const getStaticPaths = (async () => {
-  const snippets = await getAllSnippets();
-  return snippets.map((snippet) => ({
-    params: { slug: snippet.id }, // ✅ Use .id
-    props: { snippet },
-  }));
+	const snippets = await getAllSnippets();
+	return snippets.map((snippet) => ({
+		params: { slug: snippet.id }, // ✅ Use .id
+		props: { snippet },
+	}));
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -18,12 +24,12 @@ const { snippet } = Astro.props;
 const { Content } = await render(snippet);
 
 const meta = {
-  title: snippet.data.title,
-  description: snippet.data.description ?? ""
+	title: snippet.data.title,
+	description: snippet.data.description ?? "",
 };
 ---
 
 <PageLayout meta={meta}>
-  <h1 class="title mb-4">{snippet.data.title}</h1>
-  <Content />
+	<h1 class="title mb-4">{snippet.data.title}</h1>
+	<Content />
 </PageLayout>

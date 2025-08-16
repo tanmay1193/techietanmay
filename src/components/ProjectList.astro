@@ -10,9 +10,28 @@ import { projects } from "@/data/projects";
 					href={link}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="cactus-link hover:text-accent"
+					class="cactus-link hover:text-accent flex items-center gap-1"
 				>
-					{title}
+					<span>{title}</span>
+					<svg
+						class="h-3.5 w-3.5 text-current opacity-70"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+						/>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15 3h6v6m-11 5L21 3"
+						/>
+					</svg>
 				</a>
 
 				<p class="text-sm text-[var(--color-global-text)]">{description}</p>

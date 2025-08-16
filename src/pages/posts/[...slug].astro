@@ -4,6 +4,12 @@ import { getAllPosts } from "@/data/post";
 import PostLayout from "@/layouts/BlogPost.astro";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 
+// --- Trailing slash redirect ---
+if (Astro.request.url.endsWith("/")) {
+	// Redirect to URL without trailing slash
+	return Astro.redirect(Astro.request.url.slice(0, -1), 301);
+}
+
 // if you're using an adaptor in SSR mode, getStaticPaths wont work -> https://docs.astro.build/en/guides/routing/#modifying-the-slug-example-for-ssr
 export const getStaticPaths = (async () => {
 	const blogEntries = await getAllPosts();

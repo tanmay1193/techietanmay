@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
 	*/
 	title: "Techie Tanmay",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
-	url: "https://0xtechietanmay.vercel.app/",
+	url: "https://0xtechietanmay.vercel.app",
 };
 
 // Used to generate links in both the Header & Footer.
@@ -49,7 +49,7 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "/Snippets",
 	},
 	{
-		path: "https://docs.google.com/document/d/1VcAc7jhF3B2tOL6JJ5aa76FN4kXil9FP5-svZPBMzPU/edit?tab=t.0#heading=h.gjdgxs",
+		path: "/cv",
 		title: "/CV",
 	},
 ];

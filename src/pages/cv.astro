@@ -1,0 +1,156 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import DecryptingHeader from "@/components/DecryptingHeader.astro";
+
+const resumePdf = "/cv.pdf";
+---
+
+<PageLayout meta={{ title: "CV" }}>
+	<div class="space-y-8">
+		<!-- Header -->
+		<div class="mb-0 flex items-center justify-between">
+			<DecryptingHeader text="> cat resume.astro" className="title pb-6 font-bold" />
+			<a
+				href={resumePdf}
+				download
+				class="bg-global-text/5 text-background hover:text-accent -mt-3 rounded px-4 py-2 font-semibold"
+			>
+				Download Resume
+			</a>
+		</div>
+
+		<!-- Professional Experience Card -->
+		<section class="bg-global-text/5 rounded-lg p-6 shadow-lg">
+			<h2 class="mb-4 text-2xl font-bold">Work</h2>
+
+			<div class="mb-4">
+				<h3 class="font-semibold underline">
+					Independent Cybersecurity & Networking Projects and Freelance IT Support | Remote |
+					2023–Present
+				</h3>
+				<ul class="marker:text-accent mt-2 list-outside list-disc space-y-2 pl-6">
+					<li>
+						Completed 20+ labs on TryHackMe and 2+ labs on Hack The Box, gaining skills in network
+						enumeration, vulnerability scanning, and exploitation basics.
+					</li>
+					<li>
+						Delivered IT support services for individuals and small businesses, including website
+						creation, hardware upgrades, software troubleshooting, and network setup.
+					</li>
+					<li>Built 5+ Python and Bash scripts for network scanning and port analysis.</li>
+				</ul>
+			</div>
+
+			<div class="mb-4">
+				<h3 class="font-semibold underline">
+					Network Analyst | Sun Life Financial | Waterloo, CA | 2021–2023
+				</h3>
+				<ul class="marker:text-accent mt-2 list-outside list-disc space-y-2 pl-6">
+					<li>Deployed 250+ firewall rules in a quarter with zero downtime.</li>
+					<li>
+						Upgraded 20+ BlueCat DNS servers, securing connectivity for 20,000+ employees worldwide.
+					</li>
+					<li>Conducted root-cause analysis for 100+ network issues, reducing downtime by 25%.</li>
+					<li>Automated network configuration tasks for 50+ F5 Load-balancers.</li>
+					<li>Recognized with a 4% salary increase in 6 months.</li>
+				</ul>
+			</div>
+
+			<div class="mb-4">
+				<h3 class="font-semibold underline">
+					Junior IT Support | Collega International Inc. | Toronto, CA | 2019–2020
+				</h3>
+				<ul class="marker:text-accent mt-2 list-outside list-disc space-y-2 pl-6">
+					<li>Provided IT support for 200+ users, achieving an 85% satisfaction rate.</li>
+					<li>
+						Automated Windows 10 workstation deployments, improving onboarding efficiency by 75%.
+					</li>
+					<li>Enhanced printer network compatibility, boosting productivity by 90%.</li>
+					<li>Administered Active Directory and Office 365 for 200+ users.</li>
+				</ul>
+			</div>
+
+			<div class="mb-4">
+				<h3 class="font-semibold underline">
+					Network Operations Analyst Intern | Sun Life Financial | Waterloo, CA | 2018
+				</h3>
+				<ul class="marker:text-accent mt-2 list-outside list-disc space-y-2 pl-6">
+					<li>Automated network configuration for 50+ F5 Load Balancers.</li>
+					<li>Implemented 50+ DNS changes bi-weekly with zero errors.</li>
+					<li>Developed iRule scripts for HTTP-to-HTTPS redirection.</li>
+					<li>Disabled vulnerable TLSv1 protocols on 20+ devices.</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Certifications Card -->
+		<section class="bg-global-text/5 rounded-lg p-6 shadow-lg">
+			<h2 class="mb-4 text-2xl font-bold">Certifications</h2>
+			<ul class="marker:text-accent list-outside list-disc space-y-2 pl-6">
+				<li>CompTIA Security+ | in progress | 2025</li>
+				<li>Google Cybersecurity Professional Certificate | 2024</li>
+				<li>AWS Cloud Quest: Cloud Practitioner | 2023</li>
+				<li>Foundations of Operationalizing MITRE ATT&CK | 2021</li>
+			</ul>
+		</section>
+
+		<!-- Skills Card -->
+		<section class="bg-global-text/5 rounded-lg p-6 shadow-lg">
+			<h2 class="mb-4 text-2xl font-bold">Skills</h2>
+			<ul class="marker:text-accent list-outside list-disc space-y-2 pl-6">
+				<li>
+					<b>Technical:</b> Network Support & Troubleshooting, Firewall Management, Routing & Switching,
+					Threat Detection & Response, Incident Analysis, VPN Troubleshooting, Python, Bash, Linux, Active
+					Directory, Security Procedures Documentation, Compliance (GDPR, ISO 27001 basics).
+				</li>
+				<li>
+					<b>Tools:</b> Checkpoint, F5, Cisco, BlueCat, Wireshark, Aruba, ScienceLogic, ServiceNow, Bash,
+					SecureCRT, AWS, Airwave.
+				</li>
+				<li>
+					<b>Human Skills:</b> Team Collaboration, Cross-Department Communication, Problem-Solving, Adaptability
+					in Fast-Changing Environments, Customer Service Orientation, Technical Documentation & Knowledge
+					Sharing.
+				</li>
+				<li>
+					<b>Emerging AI Skills:</b> Prompt Engineering (ChatGPT), Generative AI for IT Support, AI-Powered
+					Documentation Creation, Automating IT Tasks with AI
+				</li>
+			</ul>
+		</section>
+
+		<!-- Education Card -->
+		<section class="bg-global-text/5 rounded-lg p-6 shadow-lg">
+			<h2 class="mb-4 text-2xl font-bold">Education</h2>
+			<ul class="space-y-4">
+				<!-- Item 1 -->
+				<li class="grid grid-cols-[8.7fr_3fr_1fr_0.5fr] gap-4">
+					<span class="text-left">Post Graduate Certificate in Computer Application Security</span>
+					<span class="text-left">Conestoga College</span>
+					<span class="text-left">Canada</span>
+					<span class="text-right">2018</span>
+				</li>
+				<li class="grid grid-cols-[8.7fr_3fr_1fr_0.5fr] gap-4">
+					<span class="text-left"
+						>Post Graduate Certificate in Computer Application Development</span
+					>
+					<span class="text-left">Conestoga College</span>
+					<span class="text-left">Canada</span>
+					<span class="text-right">2017</span>
+				</li>
+				<li class="grid grid-cols-[8.7fr_3fr_1fr_0.5fr] gap-4">
+					<span class="text-left">Post Graduate Diploma in Computer Application</span>
+					<span class="text-left">M.S. University</span>
+					<span class="text-left">India</span>
+					<span class="text-right">2016</span>
+				</li>
+				<li class="grid grid-cols-[8.7fr_3fr_1fr_0.5fr] gap-4">
+					<span class="text-left">Bachelor of Computer Applications</span>
+					<span class="text-left">Navrachana University</span>
+					<span class="text-left">India</span>
+					<span class="text-right">2014</span>
+				</li>
+			</ul>
+		</section>
+	</div>
+</PageLayout>

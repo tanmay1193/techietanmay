@@ -101,6 +101,7 @@ export default defineConfig({
 			WEBMENTION_PINGBACK: envField.string({ context: "client", access: "public", optional: true }),
 		},
 	},
+	
 });
 
 function rawFonts(ext: string[]) {

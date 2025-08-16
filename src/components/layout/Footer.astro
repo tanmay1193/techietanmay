@@ -1,26 +1,50 @@
 ---
 import { menuLinks, siteConfig } from "@/site.config";
+import { Icon } from "astro-icon/components";
 
 const year = new Date().getFullYear();
 ---
 
-<footer
-	class="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pt-20 pb-4 text-center align-top font-semibold text-gray-600 sm:flex-row sm:justify-between sm:text-xs dark:text-gray-400"
->
-	<div class="me-0 sm:me-4">
-		&copy; Made with ❤️ by {siteConfig.author} | {year}
-	</div>
-	<nav
-		aria-labelledby="footer_links"
-		class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500"
-	>
-		<p id="footer_links" class="sr-only">More on this site</p>
-		{
-			menuLinks.map((link) => (
-				<a class="hover:text-global-text px-4 py-2 hover:underline sm:py-0" href={link.path}>
-					{link.title}
-				</a>
-			))
-		}
-	</nav>
+<footer class="mt-auto w-full pt-10 pb-6 text-center text-gray-600 dark:text-gray-400 text-sm">
+
+  <!-- Row 1: Social Icons -->
+  <div class="flex justify-center gap-x-4 mb-4">
+    <a href="https://www.linkedin.com/in/tanmaytechie/" target="_blank" aria-label="LinkedIn" 
+       class="transition-colors duration-200 hover:text-accent">
+      <Icon name="mdi:linkedin" class="h-6 w-6" />
+    </a>
+    <a href="https://github.com/tanmay1193" target="_blank" aria-label="GitHub" 
+       class="transition-colors duration-200 hover:text-accent">
+      <Icon name="mdi:github" class="h-6 w-6" />
+    </a>
+    <a href="mailto:ttanmay1193@gmail.com" aria-label="Email" 
+       class="transition-colors duration-200 hover:text-accent">
+      <Icon name="mdi:email" class="h-6 w-6" />
+    </a>
+    <a href="https://tanmaytechie.medium.com/" aria-label="Medium" 
+       class="transition-colors duration-200 hover:text-accent">
+      <Icon name="mdi:medium" class="h-6 w-6" />
+    </a>
+    <a href="https://twitter.com/techietanmay" target="_blank" aria-label="Twitter" 
+       class="transition-colors duration-200 hover:text-accent">
+      <Icon name="mdi:twitter" class="h-6 w-6" />
+    </a>
+  </div>
+
+  <!-- Row 2: Navigation Links -->
+  <nav class="flex justify-center gap-x-6 mb-4 flex-wrap">
+     {/* Index link at the start */}
+    <a href={siteConfig.url || "/"} class="transition-colors duration-200 hover:text-accent hover:underline">
+      /Index
+    </a>
+    
+    {menuLinks.map((link) => (
+      <a href={link.path} class="transition-colors duration-200 hover:text-accent hover:underline">{link.title}</a>
+    ))}
+  </nav>
+
+  <!-- Row 3: Made with -->
+  <div class="text-xs text-gray-500 dark:text-gray-400">
+    &copy; Made with ❤️ by {siteConfig.author} | {year}
+  </div>
 </footer>
