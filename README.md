@@ -9,6 +9,8 @@ Check out the [Demo](https://0xtechietanmay.vercel.app), hosted on Vercel
 ## Preview
 
 <img width="929" height="1284" alt="image" src="https://github.com/user-attachments/assets/66f30164-9f39-4b84-bdff-b330ac53a8b4" />
+<img width="929" height="1284" alt="image" src="https://github.com/user-attachments/assets/1a2f97ff-aa3f-4777-861b-f2b39d8e519d" />
+
 
 ## Quick Start
 
