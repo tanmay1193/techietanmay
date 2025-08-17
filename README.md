@@ -1,10 +1,16 @@
-# TechieTanmay Blog
+# Techie Tanmay Blog
 
 This is my personal blog and portfolio, built by first cloning the [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus) theme and making extensive customizations to fit my style and content.
 
 ## Demo 💻
 
 Check out the [Demo](https://0xtechietanmay.vercel.app), hosted on Vercel
+
+## Preview
+
+<img width="929" height="1284" alt="image" src="https://github.com/user-attachments/assets/66f30164-9f39-4b84-bdff-b330ac53a8b4" />
+<img width="929" height="1284" alt="image" src="https://github.com/user-attachments/assets/1a2f97ff-aa3f-4777-861b-f2b39d8e519d" />
+
 
 ## Quick Start
 
@@ -51,3 +57,7 @@ npm run dev   # or pnpm dev
 ## Deploy
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tanmay1193/techietanmay) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tanmay1193/techietanmay)
+
+## Sponsor me
+
+[![Support me on Ko-fi](https://img.shields.io/badge/Support-Ko--fi-29ABE0?style=for-the-badge&logo=kofi)](https://ko-fi.com/tanmaytechie)
