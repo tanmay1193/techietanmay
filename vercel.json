@@ -4,6 +4,11 @@
       "source": "/posts/:slug/",
       "destination": "/posts/:slug",
       "permanent": true
+    },
+    {
+      "source": "/snippets/:slug/",
+      "destination": "/snippets/:slug",
+      "permanent": true
     }
   ]
 }
