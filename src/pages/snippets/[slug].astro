@@ -4,12 +4,6 @@ import { getAllSnippets } from "@/data/snippet";
 import PageLayout from "@/layouts/Base.astro";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 
-// --- Trailing slash redirect ---
-if (Astro.request.url.endsWith("/")) {
-	// Redirect to URL without trailing slash
-	return Astro.redirect(Astro.request.url.slice(0, -1), 301);
-}
-
 export const getStaticPaths = (async () => {
 	const snippets = await getAllSnippets();
 	return snippets.map((snippet) => ({
